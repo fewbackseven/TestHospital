@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             BackgroundColor="Bisque"
+             x:Class="TestHospital.Views.ActualAppointment">
+
+    <StackLayout>
+        <Frame x:Name="_Header" BackgroundColor="#99CCFF" Margin="0"  CornerRadius="0" HasShadow="False">
+            <StackLayout  Orientation="Horizontal"   >
+                <Image x:Name="File_Image" Source="UserProfile.png" Aspect="AspectFit" HorizontalOptions="Start" VerticalOptions="Start" HeightRequest="30" WidthRequest="30" ></Image>
+                <Label x:Name="Book" Text="Books" HorizontalTextAlignment="Start" VerticalOptions="Center" HorizontalOptions="StartAndExpand" TextColor="AliceBlue" FontSize="15"  FontAttributes="Bold"/>
+                <Image Source="notification1.png" Aspect="AspectFit" HeightRequest="30" WidthRequest="20" HorizontalOptions="End" VerticalOptions="Start"></Image>
+                <Label Text="1" TextColor="Red" VerticalOptions="Start" FontSize="12" Margin="-8,0,0,0" Padding="0"/>
+                <Image Source="helpdesk.png" Aspect="AspectFit" HeightRequest="30" WidthRequest="20" HorizontalOptions="End" VerticalOptions="Start"></Image>
+            </StackLayout>
+        </Frame>
+
+        <ScrollView x:Name="AppointmentsScroll">
+          <StackLayout>
+            <StackLayout x:Name="Location" Orientation="Horizontal" Spacing="0" Margin="0" Padding="15" BackgroundColor="White">
+                <Image Source="location.png" Aspect="AspectFit"  HeightRequest="30" Margin="15,0,0,0" WidthRequest="30"/>
+                <Label Text="Select Location" FontSize="Medium" Margin="15,0,0,0" TextColor="Black" VerticalOptions="Center"/>
+                <Label Text=">" FontSize="Large" TextColor="Black" HorizontalOptions="EndAndExpand"/>
+                
+            </StackLayout>
+
+            <StackLayout x:Name="Hospitals" Orientation="Horizontal" Spacing="0" Margin="0" Padding="15" BackgroundColor="White">
+                <Image Source="location.png" Aspect="AspectFit"  HeightRequest="30" Margin="15,0,0,0" WidthRequest="30"/>
+                <Label Text="Select Hospitals" FontSize="Medium" Margin="15,0,0,0" TextColor="Black" VerticalOptions="Center"/>
+                <Label Text=">" FontSize="Large" TextColor="Black" HorizontalOptions="EndAndExpand"/>
+
+            </StackLayout>
+
+                <StackLayout x:Name="Doctors" Orientation="Horizontal" Spacing="0" Margin="0" Padding="15" BackgroundColor="White">
+                    <Image Source="location.png" Aspect="AspectFit"  HeightRequest="30" Margin="15,0,0,0" WidthRequest="30"/>
+                    <Label Text="Select Doctors" FontSize="Medium" Margin="15,0,0,0" TextColor="Black" VerticalOptions="Center"/>
+                    <Label Text=">" FontSize="Large" TextColor="Black" HorizontalOptions="EndAndExpand"/>
+
+                </StackLayout>
+              
+              
+              
+            </StackLayout>
+        </ScrollView>
+    </StackLayout>
+    
+</ContentPage>

@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "322100311849",
+    "project_id": "testhospital-3857b",
+    "storage_bucket": "testhospital-3857b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:322100311849:android:0d40c39897cbae65926938",
+        "android_client_info": {
+          "package_name": "com.companyname.testhospital"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "322100311849-5uk83b8jerevmaj4u1cj7c1iht90rng1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.companyname.testhospital",
+            "certificate_hash": "e11823a555ccca04727d244adfbbd9b78b5933f4"
+          }
+        },
+        {
+          "client_id": "322100311849-jh4er33gfvgb97e7q73tiquetmml32hu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBXs35QfReNR9a3756CTcscLJy4VvZwDuw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "322100311849-jh4er33gfvgb97e7q73tiquetmml32hu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

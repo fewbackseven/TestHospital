@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:viewmodels="clr-namespace:TestHospital.ViewModels" 
+             x:DataType="viewmodels:LoginClass"
+             BackgroundColor="Beige" 
+             Shell.FlyoutBehavior="Disabled"
+             x:Class="TestHospital.MainPage" >
+    <ScrollView x:Name="MyScroll">
+    <StackLayout>
+        <Frame BackgroundColor="LightPink" Padding="24"  CornerRadius="0">
+            <Label Text="Welcome to HOSPITAL NEO" FontAttributes="Bold"  HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        </Frame>
+        
+        
+        <Entry x:Name="FullNamedetails" BackgroundColor="WhiteSmoke" Margin="35,15,35,0" TextColor="Black" 
+               Placeholder="Enter Your Full Name" HorizontalTextAlignment="Center"
+               Text="{Binding FullNameDetails}"
+               PlaceholderColor="DarkGray" />
+
+        <Entry x:Name="EmailIDDetails" BackgroundColor="WhiteSmoke" Margin="35,15,35,0"               
+               Placeholder="Enter Your Email ID" HorizontalTextAlignment="Center" TextColor="Black"
+               Text="{Binding EmailIdDetails}"
+               PlaceholderColor="DarkGray" />
+
+
+        <Entry x:Name="PhnNumDetails" BackgroundColor="WhiteSmoke" Margin="35,15,35,0"
+               Placeholder="Enter Your Phone Number with Country Code" HorizontalTextAlignment="Center"
+               Text="{Binding PhoneNumberDetails}" TextColor="Black"
+               PlaceholderColor="DarkGray" />
+        
+        <Button x:Name="GetRegistered1" Text="Login/Register with OTP"  Margin="35,15,35,5"
+                TextColor="White" BackgroundColor="Blue"
+                Command="{Binding GetRegistered}" />
+        <Entry x:Name="otpCode" BackgroundColor="WhiteSmoke"
+               Text="{Binding OTPCode}"
+               Placeholder="Enter OTP" TextColor="Black" PlaceholderColor="DarkGray" HorizontalTextAlignment="Center"
+               IsVisible="{Binding IsOtpenabled}" Margin="35,50,35,0" />
+        <Button x:Name="otpCodeSend" Text="Verify Code"   
+                Margin="35,15,35,0" IsVisible="{Binding IsBtnOTPenabled}"
+                Command="{Binding VerifyOTPCommand}"
+                TextColor="White" Clicked="OnLoginClicked"
+                BackgroundColor="Blue" />
+
+    </StackLayout>
+    </ScrollView>
+
+</ContentPage>

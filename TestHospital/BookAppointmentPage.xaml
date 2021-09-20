@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                xmlns:local="clr-namespace:TestHospital.Views"
+                   xmlns:root="clr-namespace:TestHospital" xmlns:viewmodels="clr-namespace:TestHospital.ViewModels" x:DataType="viewmodels:LoginClass"
+       x:Class="TestHospital.BookAppointmentPage">
+    <!--Pages can be added as references or inline-->
+    <!--<Shell.TabBarBackgroundColor>white</Shell.TabBarBackgroundColor>
+    <Shell.TabBarUnselectedColor>black</Shell.TabBarUnselectedColor>
+    <Shell.TabBarTitleColor>Blue</Shell.TabBarTitleColor>
+    <Shell.NavBarIsVisible>False</Shell.NavBarIsVisible>-->
+
+
+    <Shell.Resources>
+        <ResourceDictionary>
+            <Style x:Key="BaseStyle" TargetType="Element">
+                <Setter Property="Shell.BackgroundColor" Value="{StaticResource Primary}" />
+                <Setter Property="Shell.ForegroundColor" Value="White" />
+                <Setter Property="Shell.TitleColor" Value="White" />
+                <Setter Property="Shell.DisabledColor" Value="#B4FFFFFF" />
+                <Setter Property="Shell.UnselectedColor" Value="#95FFFFFF" />
+                <Setter Property="Shell.NavBarIsVisible" Value="False"/>
+                <Setter Property="Shell.TabBarBackgroundColor" Value="WhiteSmoke" />
+                <Setter Property="Shell.TabBarForegroundColor" Value="Blue"/>
+                <Setter Property="Shell.TabBarUnselectedColor" Value="Black"/>
+                <Setter Property="Shell.TabBarTitleColor" Value="Blue"/>
+            </Style>
+            <Style TargetType="TabBar" BasedOn="{StaticResource BaseStyle}" />
+            <Style TargetType="FlyoutItem" BasedOn="{StaticResource BaseStyle}" />
+        </ResourceDictionary>
+    </Shell.Resources>
+
+    <ShellItem Route="Login" IsVisible="{Binding IsLoggedIn}">
+        <ShellContent ContentTemplate="{DataTemplate root:MainPage}"/>        
+    </ShellItem>
+
+    <TabBar Route="BookAppointmentPage" >
+        <Tab Title="Appointments"  Route="AppointmentsPage" Icon="appointment.png" >
+
+            <ShellContent ContentTemplate="{DataTemplate local:AppointmentsPage}"/>
+        </Tab>
+
+
+        <Tab Title="Reports" Route="Reports" Icon="report.png">
+
+            <ShellContent ContentTemplate="{DataTemplate local:Reports}"/>
+        </Tab>
+    
+        <!--
+        <Tab Title="Bills" Route="BillsPage" Icon="Bills.png">
+            
+            <ShellContent ContentTemplate="{DataTemplate local:BillsPage}"/>
+
+        </Tab>
+
+        <Tab Title="Profile" Route="profile" Icon="profile.png">
+            <ShellContent ContentTemplate="{DataTemplate local:Profile}"/>
+        </Tab>-->
+
+        <Tab Title="More" Route="MorePage" Icon="More.png">
+            <ShellContent ContentTemplate="{DataTemplate local:MorePage}"/>
+        </Tab>
+    </TabBar>
+
+</Shell>
